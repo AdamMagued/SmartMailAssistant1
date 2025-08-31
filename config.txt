@@ -1,0 +1,436 @@
+{
+  "ApiSettings": {
+    "ApiKey": "YOUR_API_KEY_HERE",
+    "ApiEndpoint": "YOUR_API_ENDPOINT_HERE",
+    "ModelName": "YOUR_MODELNAME_HERE",
+    "TimeoutSeconds": 60,
+    "MessageRole": "user",
+    "StreamPrefix": "data:",
+    "StreamEndMarker": "[DONE]",
+    "ResponseContentPath": "choices[0].message.content",
+    "ApiUrl": "YOUR_API_ENDPOINT_HERE_again",
+    "RequestHeaders": {
+      "Authorization": "Bearer {API_KEY}",
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    },
+    "RequestParameters": {
+      "model": "{MODEL_NAME}",
+      "messages": "{MESSAGES}",
+      "stream": true,
+      "max_tokens": 2000,
+      "temperature": 0.1
+    }
+  },
+  "RibbonSettings": {
+    "Ribbon1": {
+      "Button1Text": "📄 Summarize",
+      "Button1Tooltip": "Generate a summary of the selected email",
+      "Button2Text": "🌍 Translate",
+      "Button2Tooltip": "Translate the selected email to the configured language",
+      "Button3Text": "💬 Smart Reply",
+      "Button3Tooltip": "Generate an intelligent reply suggestion",
+      "Button4Text": "📂 Classify Emails",
+      "Button4Tooltip": "Classify unread emails"
+    },
+    "Ribbon2": {
+      "Button5Text": "🤖 AI Classify",
+      "Button5Tooltip": "Classify all unread emails in the current folder using AI and rules"
+    }
+  },
+  "OutlookSettings": {
+    "MapiNamespace": "MAPI",
+    "DefaultFolders": {
+      "PrimaryFolder": "olFolderInbox",
+      "FallbackFolder": "olFolderInbox",
+      "SupportedFolderTypes": [
+        "olFolderInbox",
+        "olFolderSentMail",
+        "olFolderOutbox",
+        "olFolderDeletedItems",
+        "olFolderDrafts"
+      ]
+    },
+    "ItemRestrictions": {
+      "UnreadFilter": "[Unread] = true",
+      "ReadFilter": "[Unread] = false",
+      "TodayFilter": "[ReceivedTime] >= '{TODAY}'",
+      "ThisWeekFilter": "[ReceivedTime] >= '{WEEK_START}'",
+      "CustomFilters": [
+        "[Importance] = 2",
+        "[HasAttachments] = true"
+      ]
+    },
+    "ViewSettings": {
+      "ResetViewAfterClassification": true,
+      "RefreshViewAfterChanges": true,
+      "ViewUpdateDelayMs": 1000
+    },
+    "DefaultFallbackFolder": "olFolderInbox"
+  },
+  "UiSettings": {
+    "Fonts": {
+      "Default": "Segoe UI,14,Regular",
+      "DefaultRtl": "Traditional Arabic,20,Regular",
+      "Arabic": "Traditional Arabic,20,Regular",
+      "Hebrew": "Arial,14,Regular",
+      "Persian": "Arial,14,Regular",
+      "Urdu": "Nafees Web,14,Regular",
+      "Pashto": "Arial,14,Regular"
+    },
+    "Colors": {
+      "DarkBackground": "45,45,48",
+      "TextColor": "245,245,245",
+      "TextBoxBackground": "60,60,63",
+      "RetryButtonColor": "70,130,70",
+      "SendButtonColor": "0,120,215",
+      "GenerateAnywayButtonColor": "255,140,0",
+      "CloseButtonColor": "70,70,73"
+    },
+    "ButtonSettings": {
+      "PanelHeight": 50,
+      "ButtonWidth": 120,
+      "LargeButtonWidth": 180,
+"ForceReplySendButtonWidth": 200, 
+      "ButtonSpacing": 15,
+      "CloseButtonSpacing": 30,
+      "CustomActions": {}
+    },
+    "LoadingSettings": {
+      "AnimationInterval": 500,
+      "LoadingStates": [
+        "Loading",
+        "Loading.",
+        "Loading..",
+        "Loading..."
+      ]
+    },
+    "StreamingSettings": {
+      "CharacterDelay": 15
+    }
+  },
+  "WindowSettings": {
+    "MainWindow": {
+      "Width": 850,
+      "Height": 650
+    },
+    "ProgressWindow": {
+      "Width": 520,
+      "Height": 220,
+      "MinHeight": 180,
+      "HeightDivisor": 3,
+      "FormBorderStyle": "FixedDialog",
+      "StartPosition": "CenterScreen",
+      "MaximizeBox": false,
+      "MinimizeBox": false
+    }
+  },
+  "EmailSettings": {
+    "MessageSeparators": [
+      "\nFrom:",
+      "\nSent:",
+      "\nTo:",
+      "\nSubject:",
+      "\n-----Original Message-----",
+      "\n________________________________",
+      "\nGet Outlook for",
+      "\nOn",
+      "\nwrote:"
+    ],
+    "SignaturePrefixes": [
+      "--",
+      "__",
+      "Disclaimer:",
+      "This email",
+      "Confidential",
+      "Best regards",
+      "Sincerely",
+      "Thanks"
+    ],
+    "DefaultFolders": {
+      "Primary": "Inbox",
+      "Fallback": "Inbox"
+    },
+    "ContentLimits": {
+      "MaxOriginalBodyPreview": 1000,
+      "MaxProcessedBodyPreview": 800,
+      "MinimalContentLength": 50,
+      "FallbackBodyLength": 200
+    },
+    "EmptyContentDefaults": {
+      "NoSubject": "[No Subject]",
+      "NoSender": "[No Sender]",
+      "NoBody": "[No Body Content]"
+    }
+  },
+  "LanguageSettings": {
+    "DefaultTranslationLanguage": "German",
+    "FallbackLanguage": "English",
+    "RightToLeftLanguages": [
+      "Arabic",
+      "Hebrew",
+      "Persian",
+      "Urdu",
+      "Pashto"
+    ]
+  },
+  "ReplySettings": {
+    "NoReplyTriggers": [
+      "no need to reply",
+      "no response required",
+      "for your information",
+      "fyi",
+      "announcement:",
+      "this is a notification"
+    ]
+  },
+  "Messages": {
+    "Loading": "Processing...",
+    "Retry": "Try Again",
+    "Close": "Done",
+    "SendReply": "Send Response",
+    "GenerateAnyway": "Force Reply",
+    "Complete": "Finished",
+    "Error": "Error",
+    "ClickRetry": "Click 'Try Again' to retry.",
+    "NoReplyNeeded": "No response needed",
+    "DefaultReplyText": "Thank you for your email.",
+    "ApiError": "API Error",
+    "GeneratingReply": "Creating Reply...",
+    "ErrorCreatingReply": "Error creating reply",
+    "NoEmailSelected": "Please select an email first.",
+    "NoEmailSelectedTitle": "No Email Selected",
+    "EmptyEmailBody": "Email body is empty.",
+    "EmptyEmailTitle": "Empty Email",
+    "GeneratingSummary": "Creating Summary...",
+    "ErrorGeneratingSummary": "Error generating summary",
+    "Translating": "Translating Email...",
+    "ErrorTranslating": "Error translating email",
+    "AnalyzingEmail": "AI Classification in Progress",
+    "ErrorAnalyzing": "Error analyzing email",
+    "InitializationError": "Initialization error",
+    "CheckConfigFile": "Please check your config file.",
+    "ConfigurationError": "Configuration Error",
+    "MissingApiKey": "API key is missing in configuration"
+  },
+  "Prompts": {
+    "Summarize": "CREATE SUMMARY:\n• Focus on key points\n• Maximum 5 bullets\n• Remove signatures\n\nCONTENT:\n{EMAIL_CONTENT}",
+    "Translate": "Translate the following email to {TARGET_LANGUAGE} (keep names unchanged):\n\n{EMAIL_CONTENT}",
+    "Reply": "STRICT REPLY GENERATION PROTOCOL - FOLLOW EXACTLY:\n\n1. FIRST ANALYZE if a response is needed:\n   - NO REPLY (0:) if: FYI, announcement, notification, calendar invite, or already resolved\n   - REPLY (1:) if: question, request, or requires acknowledgment\n\n2. OUTPUT RULES:\n   - FIRST LINE MUST BE: '0:' OR '1:' ONLY\n   - IF '1:', NEXT LINE MUST BE THE COMPLETE REPLY\n   - DO NOT STREAM PARTIAL RESPONSES\n   - REPLY MUST BE FINAL VERSION\n\n3. REPLY REQUIREMENTS:\n   - Professional tone\n   - 1-2 sentences max\n   - Address key points only\n   - No explanations or prefixes\n\n4. EXAMPLE OUTPUTS:\n0:\n(No other text)\n\n1:\nThank you for the update, I'll review the documents by EOD.\n\n1:\nUnderstood, I've scheduled the meeting for Thursday at 2PM.\n\n5. STRICT NO-REPLY SCENARIOS:\n- Mass emails\n- System notifications\n- Informational broadcasts\n- Already acknowledged items\n- Calendar invites without questions\n\nMESSAGE TO ANALYZE:\n{EMAIL_CONTENT}",
+    "ForceReply": "GENERATE REPLY (STRICT RULES):\n1. Provide ONLY the reply text (1 line)\n2. Professional tone\n3. Never include prefixes or explanations\n4. Sample responses:\n   - 'Thank you for confirming'\n   - 'I'll follow up on this'\n   - 'Noted, will proceed accordingly'\n\nMESSAGE:\n{MESSAGE}"
+  },
+  "ClassificationSettings": {
+    "Prompt": "CLASSIFY THIS EMAIL - RESPOND WITH EXACTLY ONE WORD:\n\nRULES:\n- PANCAKES: Any email that mentions pancakes, breakfast foods, or maple syrup\n- URGENT: Time-sensitive requests, deadlines, immediate action required\n- FUN: Funny emails, jokes, memes, entertaining content\n- WORK: Regular work-related emails, projects, tasks\n- SOCIAL: Social invitations, events, parties, gatherings\n\nRESPOND WITH ONLY: PANCAKES, URGENT, FUN, WORK, or SOCIAL\n\nEMAIL:\n{EMAIL_CONTENT}",
+    "Classifications": {
+      "PANCAKES": {
+        "CategoryPrefix": "A-Pancakes",
+        "Importance": "olImportanceHigh",
+        "FlagIcon": "olRedFlagIcon",
+        "FlagRequest": "Pancakes - AI Classified",
+        "SubjectPrefix": "[🥞PANCAKES]",
+        "CategoryColor": "olCategoryColorOrange"
+      },
+      "URGENT": {
+        "CategoryPrefix": "B-Urgent",
+        "Importance": "olImportanceHigh",
+        "FlagIcon": "olRedFlagIcon",
+        "FlagRequest": "Urgent - AI Classified",
+        "SubjectPrefix": "[🔴URGENT]",
+        "CategoryColor": "olCategoryColorRed"
+      },
+      "FUN": {
+        "CategoryPrefix": "C-Fun",
+        "Importance": "olImportanceNormal",
+        "FlagIcon": "olBlueFlagIcon",
+        "FlagRequest": "Fun - AI Classified",
+        "SubjectPrefix": "[😄FUN]",
+        "CategoryColor": "olCategoryColorBlue"
+      },
+      "WORK": {
+        "CategoryPrefix": "D-Work",
+        "Importance": "olImportanceNormal",
+        "FlagIcon": "olGreenFlagIcon",
+        "FlagRequest": "Work - AI Classified",
+        "SubjectPrefix": "[💼WORK]",
+        "CategoryColor": "olCategoryColorGreen"
+      },
+      "SOCIAL": {
+        "CategoryPrefix": "E-Social",
+        "Importance": "olImportanceNormal",
+        "FlagIcon": "olPurpleFlagIcon",
+        "FlagRequest": "Social - AI Classified",
+        "SubjectPrefix": "[🎉SOCIAL]",
+        "CategoryColor": "olCategoryColorPurple"
+      }
+    },
+    "PreProcessingRules": {
+      "EnableRuleBasedClassification": true,
+      "Rules": [
+        {
+          "Name": "Pancakes Rule",
+          "Classification": "PANCAKES",
+          "Priority": 100,
+          "Conditions": {
+            "MatchType": "ANY",
+            "SubjectKeywords": ["pancakes", "breakfast", "syrup", "maple", "waffles"],
+            "BodyKeywords": ["pancakes", "breakfast", "syrup", "maple", "waffles", "flapjacks"]
+          }
+        },
+        {
+          "Name": "Urgent Rule",
+          "Classification": "URGENT",
+          "Priority": 95,
+          "Conditions": {
+            "MatchType": "ANY",
+            "SubjectKeywords": ["URGENT", "ASAP", "deadline", "immediately", "emergency"],
+            "BodyKeywords": ["urgent", "asap", "deadline", "immediately", "emergency"]
+          }
+        }
+      ]
+    },
+    "AiClassification": {
+      "EnableAiClassification": true,
+      "UseAiForUnmatched": true,
+      "DynamicPrompts": {
+        "IncludeAvailableCategories": true,
+        "PromptTemplate": "CLASSIFY THIS EMAIL - RESPOND WITH EXACTLY ONE WORD:\n\nAVAILABLE CATEGORIES: {AVAILABLE_CATEGORIES}\n\nCLASSIFICATION RULES:\n{CATEGORY_DESCRIPTIONS}\n\nRESPOND WITH ONLY ONE OF: {AVAILABLE_CATEGORIES}\n\nEMAIL:\n{EMAIL_CONTENT}",
+        "CategoryDescriptions": {
+          "PANCAKES": "Any email that mentions pancakes, breakfast foods, or maple syrup",
+          "URGENT": "Time-sensitive requests, deadlines, immediate action required",
+          "FUN": "Funny emails, jokes, memes, entertaining content",
+          "WORK": "Regular work-related emails, projects, tasks",
+          "SOCIAL": "Social invitations, events, parties, gatherings"
+        }
+      }
+    },
+    "RateLimiting": {
+      "MaxConsecutiveFailures": 5,
+      "RequestsPerMinute": 30,
+      "BaseCooldownSeconds": 30,
+      "MaxCooldownMinutes": 5,
+      "MinDelayBetweenRequestsMs": 2000,
+      "DefaultMinDelayBetweenRequestsMs": 1500,
+      "RequestTimeoutSeconds": 45,
+      "DefaultRequestTimeoutSeconds": 45
+    },
+    "EmailProcessing": {
+      "ContentSeparators": [
+        "\nFrom:",
+        "\nSent:",
+        "\nTo:",
+        "\nSubject:",
+        "\n-----Original Message-----",
+        "\n________________________________",
+        "\nGet Outlook for",
+        "\nOn",
+        "\nwrote:"
+      ],
+      "MaxBodyLength": 1000,
+      "DefaultMaxBodyLength": 800
+    },
+    "Messages": {
+      "NoUnreadEmails": "No unread emails found in '{FOLDER}' folder.",
+      "ConfirmClassification": "Found {COUNT} unread emails in '{FOLDER}'.\n\nAI Classification: {AI_STATUS}\nRule-based Classification: {RULE_STATUS}\n\nProceed with AI classification?\n\nNote: Processing includes intelligent rate limiting to respect API limits.",
+      "CompletionSummary": "Classification complete!\n\n• Total processed: {PROCESSED}\n• Successfully classified: {SUCCESS}\n• Failed: {FAILED}\n\nEmails are now classified with custom categories!",
+      "HowToSeeClassifications": "To see classification colors in your email list:\n\n1. Right-click on any column header in the email list\n2. Click 'Field Chooser' or 'View Settings'\n3. Add the 'Categories' column\n4. You'll see colored bars next to classified emails",
+      "ProcessingStatus": "Processing {CURRENT}/{TOTAL}: {SUBJECT}",
+      "CooldownStatus": "[COOLDOWN: {TIME} remaining]",
+      "RetryStatus": "Retry {ATTEMPT}/{TOTAL} after {REASON}",
+      "WaitStatus": "{REASON}: {TIME} remaining"
+    },
+    "Debug": {
+      "EnableLogging": true,
+      "ContentPreviewLength": 100,
+      "DefaultContentPreviewLength": 100,
+      "TruncationIndicator": "...",
+      "DefaultTruncationIndicator": "..."
+    },
+    "Retry": {
+      "MaxAttempts": 3,
+      "DefaultFallbackOrder": ["WORK", "PANCAKES", "FUN"],
+      "BackoffMultipliers": {
+        "TimeoutRetryBase": 5,
+        "ErrorRetryBase": 10,
+        "ExponentialBase": 2,
+        "ExtendedCooldownFactor": 6
+      }
+    },
+    "Content": {
+      "AiTagPatterns": [
+        "\\[🥞PANCAKES\\]\\s*",
+        "\\[🔴URGENT\\]\\s*",
+        "\\[😄FUN\\]\\s*",
+        "\\[💼WORK\\]\\s*",
+        "\\[🎉SOCIAL\\]\\s*",
+        "\\[AI:\\s*\\w+\\]\\s*",
+        "\\[AI\\]\\s*"
+      ],
+      "FallbackContentTemplate": "[Email with subject: {SUBJECT}]",
+      "ClassificationKeywords": ["PANCAKES", "URGENT", "FUN", "WORK", "SOCIAL", "A-PANCAKES", "AI"],
+      "DefaultSeparators": [
+        "-----Original Message-----",
+        "From:",
+        "On ",
+        "________________________________"
+      ],
+      "EmptyContentFallbackLength": 200,
+      "MinimalContentFromSubjectTemplate": "[Email with subject: {SUBJECT}]"
+    },
+    "ApiResponse": {
+      "FallbackContentPaths": [
+        "choices[0].message.content",
+        "choices[0].delta.content",
+        "response",
+        "text",
+        "content"
+      ],
+      "NoContentIndicators": [
+        "NO EMAIL CONTENT PROVIDED",
+        "PLEASE PROVIDE",
+        "NO CONTENT",
+        "EMPTY",
+        "NULL"
+      ]
+    },
+    "Progress": {
+      "TimeFormatString": "mm\\:ss",
+      "StatusTemplate": "{CURRENT}/{TOTAL}: {SUBJECT}",
+      "CooldownTemplate": "  [Cooldown {TIME}]",
+      "PercentageTemplate": "{PERCENTAGE}% ({CURRENT}/{TOTAL})",
+      "UpdateIntervalMs": 100,
+      "ProgressBarStyle": "Continuous"
+    },
+    "Normalization": {
+      "ImportanceSynonyms": {
+        "high": "olImportanceHigh",
+        "low": "olImportanceLow",
+        "normal": "olImportanceNormal",
+        "medium": "olImportanceNormal"
+      },
+      "FlagIconSynonyms": {
+        "red": "olRedFlagIcon",
+        "yellow": "olYellowFlagIcon",
+        "blue": "olBlueFlagIcon",
+        "green": "olGreenFlagIcon",
+        "orange": "olOrangeFlagIcon",
+        "purple": "olPurpleFlagIcon"
+      },
+      "CategoryColorSynonyms": {
+        "red": "olCategoryColorRed",
+        "blue": "olCategoryColorBlue",
+        "yellow": "olCategoryColorYellow",
+        "green": "olCategoryColorGreen",
+        "orange": "olCategoryColorOrange",
+        "purple": "olCategoryColorPurple"
+      },
+      "DefaultImportance": "olImportanceNormal",
+      "DefaultCategoryColor": "olCategoryColorNone",
+      "DefaultFlagIcon": "olNoFlagIcon"
+    },
+    "SecurityProtocol": {
+      "PrimaryProtocol": "Tls12",
+      "FallbackProtocol": "Tls12",
+      "TryTls13": true
+    }
+  }
+}

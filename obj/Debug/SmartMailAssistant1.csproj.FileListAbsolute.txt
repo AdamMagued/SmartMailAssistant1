@@ -1,0 +1,17 @@
+A:\Projects\OutookAiAddin\SmartMailAssistant1\SmartMailAssistant1\obj\Debug\SmartMailAssistant1.csproj.AssemblyReference.cache
+A:\Projects\OutookAiAddin\SmartMailAssistant1\SmartMailAssistant1\obj\Debug\SmartMailAssistant1.Properties.Resources.resources
+A:\Projects\OutookAiAddin\SmartMailAssistant1\SmartMailAssistant1\obj\Debug\SmartMailAssistant1.Ribbon1.resources
+A:\Projects\OutookAiAddin\SmartMailAssistant1\SmartMailAssistant1\obj\Debug\SmartMailAssistant1.csproj.GenerateResource.cache
+A:\Projects\OutookAiAddin\SmartMailAssistant1\SmartMailAssistant1\obj\Debug\SmartMailAssistant1.csproj.CoreCompileInputs.cache
+A:\Projects\OutookAiAddin\SmartMailAssistant1\SmartMailAssistant1\bin\Debug\SmartMailAssistant1.dll
+A:\Projects\OutookAiAddin\SmartMailAssistant1\SmartMailAssistant1\bin\Debug\SmartMailAssistant1.pdb
+A:\Projects\OutookAiAddin\SmartMailAssistant1\SmartMailAssistant1\bin\Debug\SmartMailAssistant1.dll.manifest
+A:\Projects\OutookAiAddin\SmartMailAssistant1\SmartMailAssistant1\bin\Debug\SmartMailAssistant1.vsto
+A:\Projects\OutookAiAddin\SmartMailAssistant1\SmartMailAssistant1\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+A:\Projects\OutookAiAddin\SmartMailAssistant1\SmartMailAssistant1\bin\Debug\Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll
+A:\Projects\OutookAiAddin\SmartMailAssistant1\SmartMailAssistant1\obj\Debug\SmartMai.013C48D1.Up2Date
+A:\Projects\OutookAiAddin\SmartMailAssistant1\SmartMailAssistant1\obj\Debug\SmartMailAssistant1.dll
+A:\Projects\OutookAiAddin\SmartMailAssistant1\SmartMailAssistant1\obj\Debug\SmartMailAssistant1.pdb
+A:\Projects\OutookAiAddin\SmartMailAssistant1\SmartMailAssistant1\bin\Debug\Newtonsoft.Json.dll
+A:\Projects\OutookAiAddin\SmartMailAssistant1\SmartMailAssistant1\bin\Debug\Newtonsoft.Json.xml
+A:\Projects\OutookAiAddin\SmartMailAssistant1\SmartMailAssistant1\bin\Debug\config.txt
