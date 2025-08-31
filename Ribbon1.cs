@@ -51,7 +51,7 @@ namespace SmartMailAssistant1
                 InitializeUISettings();
                 ConfigureSecurityProtocol();
                 ValidateApiConfiguration();
-                ValidateClassificationConfiguration(); // Added for email classification
+                ValidateClassificationConfiguration(); 
 
                 _initialized = true;
                 ApplyRibbonConfiguration();
@@ -2053,7 +2053,7 @@ namespace SmartMailAssistant1
                     mail.FlagRequest = flagRequest;
                 }
 
-                // FIXED: Categories - properly clean and set categories
+                /
                 string currentCategories = mail.Categories ?? "";
                 var categoryList = new List<string>();
 
@@ -2067,7 +2067,7 @@ namespace SmartMailAssistant1
                         .ToList();
                 }
 
-                // UPDATED: Remove classification-related categories more flexibly
+                
                 var classificationPrefixes = new List<string>(config.ClassificationSettings.Content.ClassificationKeywords);
 
                 // Add ALL configured category prefixes and keys (not hardcoded anymore)
@@ -2084,7 +2084,7 @@ namespace SmartMailAssistant1
                         c.ToUpperInvariant().Contains(prefix)))
                     .ToList();
 
-                // Add ONLY the new category (avoid duplicates)
+               
                 if (!string.IsNullOrEmpty(categoryName) &&
                     !categoryList.Any(c => c.Equals(categoryName, StringComparison.OrdinalIgnoreCase)))
                 {
@@ -2094,7 +2094,7 @@ namespace SmartMailAssistant1
                 // Set the cleaned categories
                 mail.Categories = string.Join(",", categoryList.Distinct());
 
-                // FIXED: Subject prefix handling - avoid duplicates and clean existing AI tags first
+                
                 if (!string.IsNullOrWhiteSpace(subjectPrefix))
                 {
                     try

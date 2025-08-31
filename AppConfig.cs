@@ -138,7 +138,7 @@ namespace SmartMailAssistant1
     public class WindowSettings
     {
         public WindowSize MainWindow { get; set; }
-        public ProgressWindowSettings ProgressWindow { get; set; } // NEW
+        public ProgressWindowSettings ProgressWindow { get; set; } 
     }
 
     public class WindowSize
@@ -147,7 +147,7 @@ namespace SmartMailAssistant1
         public int Height { get; set; }
     }
 
-    // NEW: Progress window settings
+    
     public class ProgressWindowSettings
     {
         public int Width { get; set; }
@@ -164,12 +164,12 @@ namespace SmartMailAssistant1
     {
         public List<string> MessageSeparators { get; set; }
         public List<string> SignaturePrefixes { get; set; }
-        public DefaultFolders DefaultFolders { get; set; } // NEW
-        public ContentLimits ContentLimits { get; set; } // NEW
-        public EmptyContentDefaults EmptyContentDefaults { get; set; } // NEW
+        public DefaultFolders DefaultFolders { get; set; } 
+        public ContentLimits ContentLimits { get; set; } 
+        public EmptyContentDefaults EmptyContentDefaults { get; set; } 
     }
 
-    // NEW: Email settings additions
+    
     public class DefaultFolders
     {
         public string Primary { get; set; }
@@ -256,8 +256,8 @@ namespace SmartMailAssistant1
         public ContentSettings Content { get; set; }
         public ApiResponseSettings ApiResponse { get; set; }
         public ProgressSettings Progress { get; set; }
-        public NormalizationSettings Normalization { get; set; } // NEW
-        public SecurityProtocolSettings SecurityProtocol { get; set; } // NEW
+        public NormalizationSettings Normalization { get; set; }
+        public SecurityProtocolSettings SecurityProtocol { get; set; } 
     }
 
     public class ClassificationConfig
@@ -355,7 +355,7 @@ namespace SmartMailAssistant1
     {
         public int MaxAttempts { get; set; }
         public List<string> DefaultFallbackOrder { get; set; }
-        public BackoffMultipliers BackoffMultipliers { get; set; } // NEW
+        public BackoffMultipliers BackoffMultipliers { get; set; } 
     }
 
     // NEW: Backoff multipliers
@@ -364,7 +364,7 @@ namespace SmartMailAssistant1
         public int TimeoutRetryBase { get; set; }
         public int ErrorRetryBase { get; set; }
         public int ExponentialBase { get; set; }
-        public int ExtendedCooldownFactor { get; set; } // NEW
+        public int ExtendedCooldownFactor { get; set; } 
 
 
 
@@ -375,10 +375,10 @@ namespace SmartMailAssistant1
         public List<string> AiTagPatterns { get; set; }
         public string FallbackContentTemplate { get; set; }
         public List<string> ClassificationKeywords { get; set; }
-        public List<string> DefaultSeparators { get; set; } // NEW
+        public List<string> DefaultSeparators { get; set; } 
 
         public int EmptyContentFallbackLength { get; set; }
-        public string MinimalContentFromSubjectTemplate { get; set; } // Config-driven only public List<string> DefaultSeparators { get; set; } // Config-driven only
+        public string MinimalContentFromSubjectTemplate { get; set; } 
         
     }
 
@@ -394,11 +394,11 @@ namespace SmartMailAssistant1
         public string StatusTemplate { get; set; }
         public string CooldownTemplate { get; set; }
         public string PercentageTemplate { get; set; }
-        public int UpdateIntervalMs { get; set; } // NEW
-        public string ProgressBarStyle { get; set; } // NEW
+        public int UpdateIntervalMs { get; set; } 
+        public string ProgressBarStyle { get; set; } 
     }
 
-    // NEW: Normalization settings
+    
     public class NormalizationSettings
     {
         public Dictionary<string, string> ImportanceSynonyms { get; set; }
@@ -427,7 +427,7 @@ namespace SmartMailAssistant1
         public string Button5Text { get; set; }
         public string Button5Tooltip { get; set; }
         
-        public string Button4Text { get; set; }        // ADD THIS
+        public string Button4Text { get; set; }        
         public string Button4Tooltip { get; set; }
     }
 

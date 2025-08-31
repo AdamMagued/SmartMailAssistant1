@@ -202,7 +202,7 @@ namespace SmartMailAssistant1
             if (ui.Fonts != null)
             {
                 valid &= ValidateNotEmpty(ui.Fonts.Default, nameof(ui.Fonts.Default));
-                valid &= ValidateNotEmpty(ui.Fonts.DefaultRtl, nameof(ui.Fonts.DefaultRtl)); // 🔧 ADD THIS LINE
+                valid &= ValidateNotEmpty(ui.Fonts.DefaultRtl, nameof(ui.Fonts.DefaultRtl)); 
             }
             if (ui.ButtonSettings != null)
             {
@@ -242,7 +242,7 @@ namespace SmartMailAssistant1
         {
             bool valid = true;
             valid &= ValidateNotEmpty(lang.DefaultTranslationLanguage, nameof(lang.DefaultTranslationLanguage));
-            valid &= ValidateNotEmpty(lang.FallbackLanguage, nameof(lang.FallbackLanguage)); // 🔧 ADD THIS LINE
+            valid &= ValidateNotEmpty(lang.FallbackLanguage, nameof(lang.FallbackLanguage)); 
             valid &= ValidateNotNull(lang.RightToLeftLanguages, nameof(lang.RightToLeftLanguages));
             return valid;
         }
@@ -298,15 +298,14 @@ namespace SmartMailAssistant1
             valid &= ValidateNotNull(cs.Normalization, nameof(cs.Normalization));
             valid &= ValidateNotNull(cs.SecurityProtocol, nameof(cs.SecurityProtocol));
 
-            // Just validate that at least one category is defined
+            
             if (cs.Classifications != null && cs.Classifications.Count == 0)
             {
                 _validationErrors.Add("ClassificationSettings.Classifications must define at least one category.");
                 valid = false;
             }
 
-            // REMOVE THE DUPLICATE VALIDATION BLOCKS BELOW!
-            // You only need each validation block ONCE
+            
 
             if (cs.EmailProcessing != null)
             {
@@ -336,7 +335,7 @@ namespace SmartMailAssistant1
                 valid &= ValidatePositiveNumber(cs.Retry.BackoffMultipliers.TimeoutRetryBase, "Retry.BackoffMultipliers.TimeoutRetryBase");
                 valid &= ValidatePositiveNumber(cs.Retry.BackoffMultipliers.ErrorRetryBase, "Retry.BackoffMultipliers.ErrorRetryBase");
                 valid &= ValidatePositiveNumber(cs.Retry.BackoffMultipliers.ExponentialBase, "Retry.BackoffMultipliers.ExponentialBase");
-                valid &= ValidatePositiveNumber(cs.Retry.BackoffMultipliers.ExtendedCooldownFactor, "Retry.BackoffMultipliers.ExtendedCooldownFactor"); // NEW
+                valid &= ValidatePositiveNumber(cs.Retry.BackoffMultipliers.ExtendedCooldownFactor, "Retry.BackoffMultipliers.ExtendedCooldownFactor"); 
             }
            
             if (cs.Retry?.BackoffMultipliers != null)
