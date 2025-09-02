@@ -1,14 +1,14 @@
 {
   "ApiSettings": {
-    "ApiKey": "YOUR_API_KEY_HERE",
-    "ApiEndpoint": "YOUR_API_ENDPOINT_HERE",
+    "ApiKey": "your_api_key_here",
+    "ApiEndpoint": "your_api_endpoint_here",
     "ModelName": "YOUR_MODELNAME_HERE",
     "TimeoutSeconds": 60,
     "MessageRole": "user",
     "StreamPrefix": "data:",
     "StreamEndMarker": "[DONE]",
     "ResponseContentPath": "choices[0].message.content",
-    "ApiUrl": "YOUR_API_ENDPOINT_HERE_again",
+    "ApiUrl": "your_api_endpoint_here",
     "RequestHeaders": {
       "Authorization": "Bearer {API_KEY}",
       "Accept": "application/json",
@@ -91,7 +91,7 @@
       "PanelHeight": 50,
       "ButtonWidth": 120,
       "LargeButtonWidth": 180,
-"ForceReplySendButtonWidth": 200, 
+      "ForceReplySendButtonWidth": 200, 
       "ButtonSpacing": 15,
       "CloseButtonSpacing": 30,
       "CustomActions": {}
@@ -164,7 +164,7 @@
     }
   },
   "LanguageSettings": {
-    "DefaultTranslationLanguage": "German",
+    "DefaultTranslationLanguage": "arabic",
     "FallbackLanguage": "English",
     "RightToLeftLanguages": [
       "Arabic",

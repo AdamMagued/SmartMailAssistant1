@@ -29,7 +29,7 @@ namespace SmartMailAssistant1
         private bool _initialized = false;
 
         // Email classification state (from Ribbon2)
-        
+
 
         private void Ribbon1_Load(object sender, RibbonUIEventArgs e)
         {
@@ -51,7 +51,7 @@ namespace SmartMailAssistant1
                 InitializeUISettings();
                 ConfigureSecurityProtocol();
                 ValidateApiConfiguration();
-                ValidateClassificationConfiguration(); 
+                ValidateClassificationConfiguration();
 
                 _initialized = true;
                 ApplyRibbonConfiguration();
@@ -2053,7 +2053,7 @@ namespace SmartMailAssistant1
                     mail.FlagRequest = flagRequest;
                 }
 
-                /
+                
                 string currentCategories = mail.Categories ?? "";
                 var categoryList = new List<string>();
 
@@ -2067,7 +2067,7 @@ namespace SmartMailAssistant1
                         .ToList();
                 }
 
-                
+
                 var classificationPrefixes = new List<string>(config.ClassificationSettings.Content.ClassificationKeywords);
 
                 // Add ALL configured category prefixes and keys (not hardcoded anymore)
@@ -2084,7 +2084,7 @@ namespace SmartMailAssistant1
                         c.ToUpperInvariant().Contains(prefix)))
                     .ToList();
 
-               
+
                 if (!string.IsNullOrEmpty(categoryName) &&
                     !categoryList.Any(c => c.Equals(categoryName, StringComparison.OrdinalIgnoreCase)))
                 {
@@ -2094,7 +2094,7 @@ namespace SmartMailAssistant1
                 // Set the cleaned categories
                 mail.Categories = string.Join(",", categoryList.Distinct());
 
-                
+
                 if (!string.IsNullOrWhiteSpace(subjectPrefix))
                 {
                     try
@@ -2407,6 +2407,6 @@ namespace SmartMailAssistant1
             }
         }
 
-        
+
     }
 }
