@@ -78,3 +78,7 @@ Press F5 to build and start Outlook with the Add-in attached.
 
 2. Processing Emails: Select an email and click Summarize, Translate, or Suggest Reply. A popup window will stream the AI response.
 3. Classifying: Click Classify Emails to scan unread items in the current folder. The add-in will apply Categories and Flags (e.g., Red Flag for Urgent) based on the content.
+
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
